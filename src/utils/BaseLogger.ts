@@ -1,21 +1,22 @@
 import { Log } from "../models/Log.model";
+import { ConsoleColor } from "../constants/ConsoleColor.constant";
 
 export class BaseLogger {
   constructor() {}
 
-  log = (message: string, stack?: any) => {
+  public log = (message: string, stack?: any) => {
     this.writeToConsole(new Log("LOG", message, stack));
   };
 
-  debug = (message: string, stack?: any) => {
+  public debug = (message: string, stack?: any) => {
     this.writeToConsole(new Log("DEBUG", message, stack));
   };
 
-  error = (message: string, stack?: any) => {
+  public error = (message: string, stack?: any) => {
     this.writeToConsole(new Log("ERROR", message, stack));
   };
 
-  info = (message: string, stack?: any) => {
+  public info = (message: string, stack?: any) => {
     this.writeToConsole(new Log("INFO", message, stack));
   };
 
@@ -23,45 +24,61 @@ export class BaseLogger {
     switch (log.type) {
       case "DEBUG":
         console.debug(
-          `[${log.datetime.toLocaleString()}] [${log.type}] - ${
-            log.message
-          }\r\n`
+          `${ConsoleColor.BgWhite} ${ConsoleColor.FgBlack}`,
+          `[${log.datetime.toLocaleString()}]`,
+          `${ConsoleColor.Reset}`,
+          `${log.color}`,
+          `[${log.type}]`,
+          `${ConsoleColor.Reset}`,
+          `- ${log.message}\r\n`
         );
         if (log.stack) {
-          console.debug(`--Details::`);
+          console.debug(`--Stack::`);
           console.debug(log.stack);
         }
         break;
       case "LOG":
         console.log(
-          `[${log.datetime.toLocaleString()}] [${log.type}] - ${
-            log.message
-          }\r\n`
+          `${ConsoleColor.BgWhite} ${ConsoleColor.FgBlack}`,
+          `[${log.datetime.toLocaleString()}]`,
+          `${ConsoleColor.Reset}`,
+          `${log.color}`,
+          `[ ${log.type} ]`,
+          `${ConsoleColor.Reset}`,
+          `- ${log.message}\r\n`
         );
         if (log.stack) {
-          console.log(`--Details::`);
+          console.log(`--Stack::`);
           console.log(log.stack);
         }
         break;
       case "ERROR":
         console.error(
-          `[${log.datetime.toLocaleString()}] [${log.type}] - ${
-            log.message
-          }\r\n`
+          `${ConsoleColor.BgWhite} ${ConsoleColor.FgBlack}`,
+          `[${log.datetime.toLocaleString()}]`,
+          `${ConsoleColor.Reset}`,
+          `${log.color}`,
+          `[${log.type}]`,
+          `${ConsoleColor.Reset}`,
+          `- ${log.message}\r\n`
         );
         if (log.stack) {
-          console.error(`--Details::`);
+          console.error(`--Stack::`);
           console.error(log.stack);
         }
         break;
       case "INFO":
         console.info(
-          `[${log.datetime.toLocaleString()}] [${log.type}] - ${
-            log.message
-          }\r\n`
+          `${ConsoleColor.BgWhite} ${ConsoleColor.FgBlack}`,
+          `[${log.datetime.toLocaleString()}]`,
+          `${ConsoleColor.Reset}`,
+          `${log.color}`,
+          `[ ${log.type}]`,
+          `${ConsoleColor.Reset}`,
+          `- ${log.message}\r\n`
         );
         if (log.stack) {
-          console.info(`--Details::`);
+          console.info(`--Stack::`);
           console.info(log.stack);
         }
         break;
