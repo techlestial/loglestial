@@ -1,0 +1,28 @@
+{
+  "name": "@techlestial/loglestial",
+  "version": "1.0.0",
+  "description": "A logging library for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techlestial/loglestial.git"
+  },
+  "keywords": [
+    "logging",
+    "log",
+    "nodejs"
+  ],
+  "author": "m3yevn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/techlestial/loglestial/issues"
+  },
+  "homepage": "https://github.com/techlestial/loglestial#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "typescript": "^3.9.5"
+  }
+}
