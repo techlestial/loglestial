@@ -4,23 +4,7 @@ import { ConsoleColor } from "../constants/ConsoleColor.constant";
 export class BaseLogger {
   constructor() {}
 
-  public log = (message: string, stack?: any) => {
-    this.writeToConsole(new Log("LOG", message, stack));
-  };
-
-  public debug = (message: string, stack?: any) => {
-    this.writeToConsole(new Log("DEBUG", message, stack));
-  };
-
-  public error = (message: string, stack?: any) => {
-    this.writeToConsole(new Log("ERROR", message, stack));
-  };
-
-  public info = (message: string, stack?: any) => {
-    this.writeToConsole(new Log("INFO", message, stack));
-  };
-
-  private writeToConsole = (log: Log) => {
+  logToConsole = (log: Log) => {
     switch (log.type) {
       case "DEBUG":
         console.debug(

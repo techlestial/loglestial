@@ -1,13 +1,8 @@
-import { BaseLogger } from "./utils/BaseLogger";
-import { FileLogger } from "./utils/FileLogger";
+import { Logger } from "./utils/Logger";
+import { IConfig } from "./models/Config.model";
 
 export const Loglestial = {
-  init: (config?: any) => {
-    switch (config) {
-      case { logToFile: true }:
-        return new FileLogger();
-      default:
-        return new BaseLogger();
-    }
+  init: (config?: IConfig) => {
+    return new Logger(config);
   },
 };

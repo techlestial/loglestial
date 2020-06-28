@@ -1,13 +1,15 @@
 import { Loglestial } from "..";
 import { Logger } from "../utils/Logger";
 
-export class BaseLoggerTest {
+export class FileLoggerTest {
   logger: Logger;
   testMessage: string;
   testStack: any;
 
   constructor(testMessage: string, testStack?: any) {
-    this.logger = Loglestial.init();
+    this.logger = Loglestial.init({
+      logToFile: true
+    });
     this.testMessage = testMessage;
     this.testStack = testStack;
   }
