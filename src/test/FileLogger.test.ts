@@ -8,7 +8,7 @@ export class FileLoggerTest {
 
   constructor(testMessage: string, testStack?: any) {
     this.logger = Loglestial.init({
-      logToFile: true
+      logToFile: true,
     });
     this.testMessage = testMessage;
     this.testStack = testStack;

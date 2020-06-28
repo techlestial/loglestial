@@ -3,6 +3,7 @@ import path from "path";
 import { IFileLoggerOptions } from "../models/Config.model";
 import { dateUtil } from "../utils/DateUtility";
 import { fileUtil } from "../utils/FileUtility";
+import { LogLevel } from "../constants/LogLevel.constant";
 
 export class FileLogger {
   options: IFileLoggerOptions = {
@@ -16,7 +17,18 @@ export class FileLogger {
   }
 
   logToFile = async (log: Log) => {
+    if (
+      this.options.logLevel &&
+      LogLevel[log.type] > LogLevel[this.options.logLevel]
+    ) {
+      return;
+    }
+
     const { directory, filePrefix } = this.options;
+    if (!directory) {
+      return;
+    }
+
     const fileName = `${filePrefix}.${dateUtil.getDateString()}.log`;
     const filePath = path.resolve(directory, fileName);
 
