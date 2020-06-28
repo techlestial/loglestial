@@ -13,7 +13,7 @@ export class Logger {
     if (!this.config) {
       return;
     }
-    if (this.config.logToFile && this.config.fileLoggerOptions) {
+    if (this.config.logToFile) {
       this.fileLogger = new FileLogger(this.config.fileLoggerOptions);
     }
   }
@@ -39,7 +39,7 @@ export class Logger {
     if (!this.config) {
       return;
     }
-    if (this.config.logToFile) {
+    if (this.fileLogger) {
       (this.fileLogger as FileLogger).logToFile(log);
     }
   }

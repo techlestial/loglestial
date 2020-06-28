@@ -1,5 +1,5 @@
 import { Loglestial } from "..";
-import { Logger } from "../utils/Logger";
+import { Logger } from "../loggers/Logger";
 
 export class FileLoggerTest {
   logger: Logger;
@@ -12,6 +12,7 @@ export class FileLoggerTest {
     });
     this.testMessage = testMessage;
     this.testStack = testStack;
+    console.log("\r\n###---Testing FileLogger functions---###\r\n");
   }
 
   testDebug() {

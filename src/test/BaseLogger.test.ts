@@ -1,5 +1,5 @@
 import { Loglestial } from "..";
-import { Logger } from "../utils/Logger";
+import { Logger } from "../loggers/Logger";
 
 export class BaseLoggerTest {
   logger: Logger;
@@ -10,6 +10,7 @@ export class BaseLoggerTest {
     this.logger = Loglestial.init();
     this.testMessage = testMessage;
     this.testStack = testStack;
+    console.log("\r\n###---Testing BaseLogger functions---###\r\n");
   }
 
   testDebug() {
