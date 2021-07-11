@@ -4,6 +4,7 @@
   "description": "A logging library for NodeJS",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test:dev": "ts-node src/test"
   },
   "repository": {
@@ -25,5 +26,13 @@
     "@types/node": "^14.0.14",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
-  }
+  },
+  "funFacts": [
+    "🌈 Simple logging with color coding",
+    "👀 Created in the vision and opinion of author",
+    "📁 Clean code and logging to file folder"
+  ],
+  "badges": [],
+  "techStacks": [],
+  "screenshots": []
 }

@@ -1,0 +1,7 @@
+src/
+node_modules/
+logs/
+.git/
+.gitignore
+package-lock.json
+tsconfig.json

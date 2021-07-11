@@ -1,4 +1,4 @@
-# 🔥@techlestial/loglestial🔥
+# @techlestial/loglestial
 
 **A logging library for NodeJS**
 
@@ -6,21 +6,22 @@
 <p>by m3yevn</p>
 
 <hr/>
-This project is awesome!
 
-This project is well tested!
+- 🌈 Simple logging with color coding
+- 👀 Created in the vision and opinion of author
+- 📁 Clean code and logging to file folder
 
 ## ⭐ Public Url
 
-This project is not published to public!
+N.A
 
 ## 📚 Tech Stack
 
-This project is using awesome tech stacks!
+N.A
 
 ## 📸 Screenshots
 
-This project does not have screenshots available.
+N.A
 
 ## 📜 Scripts
 
@@ -47,10 +48,9 @@ This project does not have dependencies
 
 ## Dev Dependencies
 
- - @types/node : $ ^14.0.14
- - ts-node : $ ^8.10.2
- - typescript : $ ^3.9.5
-
+- @types/node : $ ^14.0.14
+- ts-node : $ ^8.10.2
+- typescript : $ ^3.9.5
 
 <img src="https://cdn.dribbble.com/users/2401141/screenshots/5487982/developers-gif-showcase.gif"/>
 
