@@ -1,10 +1,10 @@
 {
   "name": "@techlestial/loglestial",
-  "version": "1.0.0",
-  "description": "A logging library for NodeJS",
+  "version": "1.0.1",
+  "description": "Loglestial - A logging library for NodeJS",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --declaration",
     "test:dev": "ts-node src/test"
   },
   "repository": {
