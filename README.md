@@ -2,7 +2,7 @@
 
 **Loglestial - A logging library for NodeJS**
 
-<p>Version 1.0.1</p>
+<p>Version 1.0.2</p>
 <p>by m3yevn</p>
 
 <hr/>
@@ -29,7 +29,7 @@ N.A
 ## 📜 Scripts
 
 ```sh
-build : $ tsc
+build : $ tsc --declaration
 test:dev : $ ts-node src/test
 
 ```
