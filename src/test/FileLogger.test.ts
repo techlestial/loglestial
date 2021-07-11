@@ -1,4 +1,4 @@
-import { Loglestial } from "..";
+import Loglestial from "..";
 import { Logger } from "../loggers/Logger";
 
 export class FileLoggerTest {

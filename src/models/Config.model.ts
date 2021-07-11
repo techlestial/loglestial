@@ -7,14 +7,6 @@ export interface IConfig {
    * further config for file logger
    */
   fileLoggerOptions?: IFileLoggerOptions;
-  /**
-   * boolean config to log to database
-   */
-  logToDatabase?: boolean;
-  /**
-   * further config for database logger
-   */
-  databaseLoggerOptions?: IDatabaseLoggerOptions;
 }
 
 export interface IFileLoggerOptions {
@@ -36,25 +28,4 @@ export interface IFileLoggerOptions {
    * @value "app" will result in app.xxxx-xx-xx.log
    */
   filePrefix?: string;
-  /**
-   * further options for archiving
-   */
-  archiveOptions?: number;
-  /**
-   * further config for deleting
-   */
-  deleteOptions?: number;
-}
-
-export interface IDatabaseLoggerOptions {
-  databaseType?: "MONGODB" | "ELASTICSEARCH" | "MSSQL";
-  logLevel?: "DEBUG" | "ERROR" | "INFO" | "LOG";
-  databaseConfig?: {
-    username?: string;
-    password?: string;
-    host?: string;
-    port?: number;
-    database?: string;
-    table?: string;
-  };
 }
