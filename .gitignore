@@ -3,3 +3,4 @@ dist/
 lib/
 logs/
 *.log
+.vercel
