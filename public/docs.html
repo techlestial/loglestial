@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Docs — Loglestial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo">Log<strong>lestial</strong></a>
+        <nav class="nav"><a href="/docs">Docs</a></nav>
+      </div>
+    </header>
+    <main class="docs-main container">
+      <h1>Loglestial API</h1>
+      <h2>Install</h2>
+      <pre>npm i @techlestial/loglestial</pre>
+      <h2>Quick start</h2>
+      <pre>const Loglestial = require("@techlestial/loglestial").default;
+// or: import Loglestial from "@techlestial/loglestial";
+
+const logger = Loglestial.init();
+logger.info("Hello from Loglestial");
+logger.error("Something went wrong");
+logger.debug("Debug detail");</pre>
+      <h2>File logging</h2>
+      <pre>const logger = Loglestial.init({
+  logToFile: true,
+  fileLoggerOptions: { fileName: "app.log", folderName: "logs" },
+});</pre>
+      <h2>Levels</h2>
+      <p><code>log</code> · <code>info</code> · <code>debug</code> · <code>error</code></p>
+    </main>
+  </body>
+</html>

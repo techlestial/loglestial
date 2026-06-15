@@ -1,60 +1,32 @@
 # @techlestial/loglestial
 
-**Loglestial - A logging library for NodeJS**
+Colorful Node.js logging — console levels + optional file output.
 
-<p>Version 1.0.3</p>
-<p>by m3yevn</p>
+- **Site:** [loglestial.vercel.app](https://loglestial.vercel.app)
+- **Pair:** [@techlestial/gitlestial](https://github.com/techlestial/gitlestial)
 
-<hr/>
-
-- 🌈 Simple logging with color coding
-- 👀 Created in the vision and opinion of author
-- 📁 Clean code and logging to file folder
-
-## ⭐ Public Url
-
-N.A
-
-## 📚 Tech Stack
-
-N.A
-
-## 📸 Screenshots
-
-N.A
-
-## 📜 Scripts
+## Install
 
 ```sh
-build : $ tsc --declaration
-build:index : $ tsc --declaration index.ts
-test:dev : $ ts-node src/test
-
+npm i @techlestial/loglestial
 ```
 
-## 🔑 Keywords
+## Usage
 
-logging,log,nodejs
+```js
+import Loglestial from "@techlestial/loglestial";
 
-## 👾 Submit issues at
+const logger = Loglestial.init();
+logger.info("ready");
+logger.error("failed", new Error("reason"));
+```
 
-https://github.com/techlestial/loglestial/issues
+## Develop
 
-## ©️ License
+```sh
+npm install
+npm test
+npm run build
+```
 
-MIT
-
-## Dependencies
-
-This project does not have dependencies
-
-## Dev Dependencies
-
-- @types/node : $ ^14.0.14
-- ts-node : $ ^8.10.2
-- typescript : $ ^3.9.5
-
-<img src="https://cdn.dribbble.com/users/2401141/screenshots/5487982/developers-gif-showcase.gif"/>
-
-<hr/>
-Happy Coding!
+MIT · [@techlestial](https://github.com/techlestial)

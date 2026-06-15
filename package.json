@@ -1,39 +1,28 @@
 {
   "name": "@techlestial/loglestial",
-  "version": "1.0.3",
-  "description": "Loglestial - A logging library for NodeJS",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Loglestial — colorful Node.js logging with optional file output",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
   "scripts": {
-    "build": "tsc --declaration",
-    "build:index": "tsc --declaration index.ts",
-    "test:dev": "ts-node src/test"
+    "build": "rimraf dist && tsc",
+    "test": "vitest run",
+    "test:dev": "vitest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/techlestial/loglestial.git"
+    "url": "git+https://github.com/techlestial/loglestial.git"
   },
-  "keywords": [
-    "logging",
-    "log",
-    "nodejs"
-  ],
+  "homepage": "https://loglestial.vercel.app",
+  "keywords": ["logging", "log", "nodejs", "loglestial", "techlestial"],
   "author": "m3yevn",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/techlestial/loglestial/issues"
-  },
-  "homepage": "https://github.com/techlestial/loglestial#readme",
+  "engines": { "node": ">=18" },
   "devDependencies": {
-    "@types/node": "^14.0.14",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.5"
-  },
-  "funFacts": [
-    "🌈 Simple logging with color coding",
-    "👀 Created in the vision and opinion of author",
-    "📁 Clean code and logging to file folder"
-  ],
-  "badges": [],
-  "techStacks": [],
-  "screenshots": []
+    "@types/node": "^22.10.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
 }
