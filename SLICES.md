@@ -8,4 +8,4 @@
 | CI + release workflows | ✅ |
 | SEO robots + sitemap | ✅ |
 | Vercel deploy | ✅ [loglestial.vercel.app](https://loglestial.vercel.app) |
-| npm `@techlestial/loglestial@2` | ⏳ tag `v2.0.0` pushed — publish via npm (browser auth) |
+| npm `@techlestial/loglestial@2` | ⏳ run `npm publish --access public` |
