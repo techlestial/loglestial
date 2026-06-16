@@ -4,7 +4,11 @@
   "description": "Loglestial — colorful Node.js logging with optional file output",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "rimraf dist && tsc",
     "test": "vitest run",
@@ -15,14 +19,22 @@
     "url": "git+https://github.com/techlestial/loglestial.git"
   },
   "homepage": "https://loglestial.vercel.app",
-  "keywords": ["logging", "log", "nodejs", "loglestial", "techlestial"],
+  "keywords": [
+    "logging",
+    "log",
+    "nodejs",
+    "loglestial",
+    "techlestial"
+  ],
   "author": "m3yevn",
   "license": "MIT",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "vitest": "^4.1.9"
   }
 }

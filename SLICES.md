@@ -7,5 +7,5 @@
 | Landing + `/docs` | ✅ |
 | CI + release workflows | ✅ |
 | SEO robots + sitemap | ✅ |
-| Vercel deploy | ⏳ after push |
-| npm `@techlestial/loglestial@2` | ⏳ tag v2.0.0 |
+| Vercel deploy | ✅ [loglestial.vercel.app](https://loglestial.vercel.app) |
+| npm `@techlestial/loglestial@2` | ⏳ tag `v2.0.0` pushed — publish via npm (browser auth) |
